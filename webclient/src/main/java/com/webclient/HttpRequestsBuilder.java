@@ -3,6 +3,7 @@ package com.webclient;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import org.springframework.context.annotation.Description;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -18,11 +19,7 @@ import static com.webclient.BaseResponse.getWebClient;
 
 public class HttpRequestsBuilder {
 
-    /**
-     * GET Http method
-     * @param url ECR endpoint
-     * @return the ECR response based on the environment
-     */
+    @Description("GET Http method")
     public static JsonElement jsonGet(String url, String appKey) {
         WebClient webClient = getWebClient(url);
 
@@ -36,11 +33,7 @@ public class HttpRequestsBuilder {
         return getJsonResponse(bodyString);
     }
 
-    /**
-     * GET Http method
-     * @param url Ship Deployment endpoint
-     * @return Ship Deployment response based on the environment
-     */
+    @Description("GET Http method")
     public static JsonElement jsonGet(String url, String username, String password) {
         WebClient webClient = getWebClient(url);
 
@@ -54,11 +47,7 @@ public class HttpRequestsBuilder {
         return getJsonResponse(responseString);
     }
 
-    /**
-     * Http Delete method
-     * @param url
-     * @param appKey
-     */
+    @Description("Http Delete method")
     public static void httpDELETE(String url, String appKey) {
         WebClient webClient = getWebClient(url);
         webClient.delete()
@@ -69,13 +58,7 @@ public class HttpRequestsBuilder {
                 .block();
     }
 
-    /**
-     * Http Post method
-     * @param url
-     * @param body
-     * @param appKey
-     * @return HTTP POST the service
-     */
+    @Description("Http Post method")
     public static JsonElement jsonPOST(String url, JsonElement body, String appKey) {
         Gson gson = new Gson();
         String requestJson = gson.toJson(body);
@@ -83,14 +66,8 @@ public class HttpRequestsBuilder {
         return httpPOST(url, appKey, requestJson);
     }
 
-    /**
-     * Http Post method
-     * @param url
-     * @param appKey
-     * @param requestJson
-     * @return
-     */
-    public static JsonElement httpPOST(String url, String appKey, String requestJson) {
+    @Description("Http Post method")
+    private static JsonElement httpPOST(String url, String appKey, String requestJson) {
 
         WebClient webClient = getWebClient(url);
 

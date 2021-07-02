@@ -3,6 +3,7 @@ package com.webclient;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import org.springframework.context.annotation.Description;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -15,12 +16,7 @@ import reactor.core.publisher.Mono;
 
 public class HttpRequestsFactory {
 
-    /**
-     * Http GET method
-     * @param url
-     * @param appKey
-     * @return
-     */
+    @Description("GET Http method")
     public static JsonElement jsonGET(String url, String appKey) {
         WebClient webClient = WebClient.create();
 
@@ -37,28 +33,15 @@ public class HttpRequestsFactory {
         return doc;
     }
 
-
-    /**
-     * HTTP POST the service
-     * @param url
-     * @param body
-     * @param appKey
-     * @return
-     */
+    @Description("GET Http method")
     public static JsonElement jsonPOST(String url, JsonElement body, String appKey) {
         Gson gson = new Gson();
         String requestJson = gson.toJson(body);
         return httpPOST(url, appKey, requestJson);
     }
 
-    /**
-     * HTTP POST
-     * @param url
-     * @param appKey
-     * @param requestJson
-     * @return
-     */
-    public static JsonElement httpPOST(String url, String appKey, String requestJson) {
+    @Description("HTTP POST")
+    private static JsonElement httpPOST(String url, String appKey, String requestJson) {
         WebClient webClient = WebClient.create();
 
         String bodyString = webClient.post()
@@ -80,14 +63,9 @@ public class HttpRequestsFactory {
         }
     }
 
-    /**
-     * Http Delete method
-     * @param url
-     * @param appKey
-     */
+    @Description("Http Delete method")
     public static void httpDELETE(String url, String appKey) {
         WebClient webClient = WebClient.create();
-
         webClient.delete()
                 .uri(url)
                 .header("AppKey", appKey)

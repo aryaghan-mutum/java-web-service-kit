@@ -1,43 +1,46 @@
 package com.webclient.workflows;
 
+import lombok.experimental.UtilityClass;
+
 /**
  * @author Anurag Muthyam
  * url: https://github.com/aryaghan-mutum
  */
 
+@UtilityClass
 public class ConstantsWorkflow {
 
     // JSON PATH (Must be changed based on where the project is located)
-    public static final String BASE_URL_PATH = "/Users/anuragmuthyam/Documents/dev/java-projects/java-web-service-kit/src/main/resources/json/";
-    public static final String COUNTRY_BY_CONTINENT = "/Users/anuragmuthyam/Documents/dev/java-projects/java-web-service-kit/webclient/src/main/resources/json/country_by_continent.json";
-    public static final String COUNTRY_BY_POPULATION_DENSITY = "/Users/anuragmuthyam/Documents/dev/java-projects/java-web-service-kit/webclient/src/main/resources/json/country_by_population_density.json";
-    public static final String MOVIE_SERVICE_PATH = "/Users/anuragmuthyam/Documents/dev/java-projects/java-web-service-kit/webclient/src/main/resources/json/movies_service.json";
+    public final String BASE_URL_PATH = "/Users/anuragmuthyam/Documents/dev/java-projects/java-web-service-kit/webclient/src/main/resources/json/";
+    public final String COUNTRY_BY_CONTINENT = BASE_URL_PATH + "country_by_continent.json";
+    public final String COUNTRY_BY_POPULATION_DENSITY = BASE_URL_PATH + "country_by_population_density.json";
+    public final String MOVIE_SERVICE_PATH = BASE_URL_PATH + "movies_service.json";
 
     // MOVIES
-    public static final String MOVIES = "payload.movies";
-    public static final String DAYS = "movie.days";
-    public static final String TITLE = "title";
-    public static final String YEAR_RELEASED = "yearReleased";
-    public static final String DATE_RELEASED = "dateReleased";
-    public static final String LANGUAGE = "movieLanguage.language";
-    public static final String CAST = "cast";
-    public static final String DIRECTOR = "director";
-    public static final String PRODUCER = "producer";
-    public static final String ACTOR1 = "actor1";
-    public static final String ACTOR2 = "actor2";
-    public static final String ACTOR3 = "actor3";
-    public static final String BUDGET = "cost.budget";
-    public static final String BOX_OFFICE = "cost.boxOffice";
-    public static final String MOVIE_RELEASE = "movie.movieRelease";
-    public static final String COUNTRY_RELEASED = "countryReleased";
-    public static final String MOVIE_ITEM = "movieItem";
-    public static final String MOVIE_RELEASED_STATE = "movieReleasedState";
-    public static final String MOVIE_RELEASED_PRICE = "moveReleasedPrice";
+    public final String MOVIES = "payload.movies";
+    public final String DAYS = "movie.days";
+    public final String TITLE = "title";
+    public final String YEAR_RELEASED = "yearReleased";
+    public final String DATE_RELEASED = "dateReleased";
+    public final String LANGUAGE = "movieLanguage.language";
+    public final String CAST = "cast";
+    public final String DIRECTOR = "director";
+    public final String PRODUCER = "producer";
+    public final String ACTOR1 = "actor1";
+    public final String ACTOR2 = "actor2";
+    public final String ACTOR3 = "actor3";
+    public final String BUDGET = "cost.budget";
+    public final String BOX_OFFICE = "cost.boxOffice";
+    public final String MOVIE_RELEASE = "movie.movieRelease";
+    public final String COUNTRY_RELEASED = "countryReleased";
+    public final String MOVIE_ITEM = "movieItem";
+    public final String MOVIE_RELEASED_STATE = "movieReleasedState";
+    public final String MOVIE_RELEASED_PRICE = "moveReleasedPrice";
     
     // COUNTRY BY AVG MALE HEIGHT
-    public static final String COUNTRIES = "payload.countries";
-    public static final String COUNTRY = "country";
-    public static final String DENSITY = "density";
-    public static final String CONTINENT = "continent";
+    public final String COUNTRIES = "payload.countries";
+    public final String COUNTRY = "country";
+    public final String DENSITY = "density";
+    public final String CONTINENT = "continent";
 
 }
