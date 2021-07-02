@@ -33,6 +33,7 @@
 	<!-- sub modules -->
 	<modules>
 		<module>webclient</module>
+		<module>webclient2</module>
 	</modules>
 
 	<dependencies>
