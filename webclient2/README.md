@@ -1,9 +1,24 @@
-# Getting Started
+### Webclient2
 
-### Reference Documentation
-For further reference, please consider the following sections:
+#### Components
+```properties
+POJOs (model) -> src/main/java/com/webclient2/model
+Services      -> src/main/java/com/webclient2/model/service
+Workflows     -> src/main/java/com/webclient2/model/workflow
+Tests         -> src/test/java/com/webclient2
+```
+#### Tools Used
+```properties
+Testing framework  -> Junit 5
+Build Management   -> Maven
+Rest API           -> Springframework's WebClient
+Method Annotations -> Spring Framework and Lombok
+```
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.5.2/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.2/maven-plugin/reference/html/#build-image)
+#### Author:
+```properties
+anurag muthyam
+anu.drumcoder@gmail.com
+https://github.com/aryaghan-mutum
+```
 
