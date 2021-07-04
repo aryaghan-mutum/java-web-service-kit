@@ -4,12 +4,11 @@
 The project is about:
 
 - Call Get, POST, DELETE services (ref: webclient2/model/service)
-- While getting the response we are passing the JSON data to POJO (Plain Old Java Objects) using WebClient (ref: webclient2/model)
+- While getting the response, pass the JSON data to POJO (Plain Old Java Objects) using WebClient (ref: webclient2/model)
 - Validate the values in the JSON object using hard assertions 
 
 Example using WebClient and POJO: 
-```properties
-
+```java
 // call GET service and pass the Employee response into Employee POJO
 private EmployeeService employeeResponse = new EmployeeService();
 Employee employees = employeeResponse.getEmployeeUserResponse(EMPLOYEE_URL);
@@ -31,7 +30,7 @@ Tests         -> src/test/java/com/webclient2
 ```properties
 Testing framework  -> Junit 5
 Build Management   -> Maven
-Rest API           -> Springframework's WebClient
+Rest API           -> Springframeworks WebClient
 Method Annotations -> Spring Framework and Lombok
 ```
 
