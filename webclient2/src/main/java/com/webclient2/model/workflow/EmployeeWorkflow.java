@@ -1,10 +1,10 @@
 package com.webclient2.model.workflow;
 
-import com.webclient2.model.employee.Datum;
-import com.webclient2.model.employee.Employee;
 import org.springframework.context.annotation.Description;
 
 import java.util.List;
+import com.webclient2.model.employee.*;
+
 import java.util.stream.Collectors;
 
 public class EmployeeWorkflow {

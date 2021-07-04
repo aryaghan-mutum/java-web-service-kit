@@ -1,5 +1,25 @@
 ### Webclient2
 
+#### Project Description
+The project is about:
+
+- Call Get, POST, DELETE services (ref: webclient2/model/service)
+- While getting the response we are passing the JSON data to POJO (Plain Old Java Objects) using WebClient (ref: webclient2/model)
+- Validate the values in the JSON object using hard assertions 
+
+Example using WebClient and POJO: 
+```properties
+
+// call GET service and pass the Employee response into Employee POJO
+private EmployeeService employeeResponse = new EmployeeService();
+Employee employees = employeeResponse.getEmployeeUserResponse(EMPLOYEE_URL);
+
+// Employee util methods are in EmployeeWorkflow
+EmployeeWorkflow employeeWorkflow = new EmployeeWorkflow(employees);
+Long totalEmployees = employeeWorkflow.getTotalEmployees();
+Assertions.assertEquals(24, totalEmployees);
+```
+
 #### Components
 ```properties
 POJOs (model) -> src/main/java/com/webclient2/model

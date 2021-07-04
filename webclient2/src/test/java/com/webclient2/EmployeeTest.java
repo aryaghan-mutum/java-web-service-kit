@@ -1,22 +1,24 @@
 package com.webclient2;
 
-import com.webclient2.model.employee.Datum;
-import com.webclient2.model.employee.Employee;
-import com.webclient2.model.service.EmployeeService;
-import com.webclient2.model.workflow.EmployeeWorkflow;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+
+import com.webclient2.model.employee.*;
+import com.webclient2.model.service.*;
+import com.webclient2.model.workflow.*;
+
 
 import java.util.List;
 
 public class EmployeeTest {
 	
 	private final String EMPLOYEE_URL = "http://dummy.restapiexample.com/api/v1/employees";
+
 	private EmployeeService employeeResponse;
-	private EmployeeWorkflow employeeWorkflow;
 	private Employee employees;
+	private EmployeeWorkflow employeeWorkflow;
 
 	public EmployeeTest() {
 		employeeResponse = new EmployeeService();

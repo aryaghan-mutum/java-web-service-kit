@@ -1,13 +1,12 @@
 package com.webclient2.model.service;
 
-import com.webclient2.model.employee.Employee;
 import org.springframework.context.annotation.Description;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.MediaType;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
-
+import com.webclient2.model.employee.*;
 import java.time.Duration;
 
 public class EmployeeService {
