@@ -56,9 +56,8 @@ public class EmployeeTest {
 	void testPost() {
 		MultiValueMap<String, String> newEmployeeMap = new LinkedMultiValueMap<>();
 		newEmployeeMap.add("name", "Automation Test Employee");
-		newEmployeeMap.add("salary", "123456");
-		newEmployeeMap.add("age", "23");
-		Employee employeeResponse = new EmployeeService().postEmployee(EMPLOYEE_URL, newEmployeeMap);
+		newEmployeeMap.add("job", "Test Job");
+		String employeeResponse = new EmployeeService().postEmployee("https://reqres.in/api/users", newEmployeeMap);
 	}
 
 

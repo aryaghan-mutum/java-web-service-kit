@@ -24,16 +24,17 @@ public class EmployeeService {
 
     //NEEDS FIX
     @Description("POST: create new record in database")
-    public Employee postEmployee(String url, MultiValueMap<String, String> newEmployeeMap) {
+    public String postEmployee(String url, MultiValueMap<String, String> newEmployeeBodyMap) {
         WebClient webClient = WebClient.create();
-        Employee employeeResponse = webClient.post()
+        String employeeResponse = webClient.post()
                 .uri(url)
-                .header("Authorization", "Bearer MY_SECRET_TOKEN")
+                .header("Authorization", "")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                 .accept(MediaType.APPLICATION_JSON)
-                .body(BodyInserters.fromFormData(newEmployeeMap))
+                .body(BodyInserters.fromFormData(newEmployeeBodyMap))
                 .retrieve()
-                .bodyToMono(new ParameterizedTypeReference<Employee>() {})
+                .bodyToMono(String.class)
+                .timeout(Duration.ofSeconds(10))
                 .block();
         return employeeResponse;
     }

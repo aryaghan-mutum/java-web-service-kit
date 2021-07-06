@@ -9,7 +9,7 @@ The project is about:
 
 Example using WebClient and POJO: 
 ```java
-// call GET service and pass the Employee response into Employee POJO
+// Call GET service and pass the Employee response into Employee POJO
 private EmployeeService employeeResponse = new EmployeeService();
 Employee employees = employeeResponse.getEmployeeUserResponse(EMPLOYEE_URL);
 
