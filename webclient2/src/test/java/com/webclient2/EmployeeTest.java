@@ -54,10 +54,11 @@ public class EmployeeTest {
 	
 	@Test
 	void testPost() {
-		MultiValueMap<String, String> newEmployeeMap = new LinkedMultiValueMap<>();
-		newEmployeeMap.add("name", "Automation Test Employee");
-		newEmployeeMap.add("job", "Test Job");
-		String employeeResponse = new EmployeeService().postEmployee("https://reqres.in/api/users", newEmployeeMap);
+		MultiValueMap<String, String> newEmployeeBodyMap = new LinkedMultiValueMap<>();
+		newEmployeeBodyMap.add("name", "Automation Test Employee");
+		newEmployeeBodyMap.add("job", "Test Job");
+		String employeeResponse = new EmployeeService().postEmployee("https://reqres.in/api/users", newEmployeeBodyMap);
+		System.out.println(employeeResponse);
 	}
 
 

@@ -22,7 +22,6 @@ public class EmployeeService {
         return employeeResponse;
     }
 
-    //NEEDS FIX
     @Description("POST: create new record in database")
     public String postEmployee(String url, MultiValueMap<String, String> newEmployeeBodyMap) {
         WebClient webClient = WebClient.create();
