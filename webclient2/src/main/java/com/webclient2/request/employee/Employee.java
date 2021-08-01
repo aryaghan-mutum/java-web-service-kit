@@ -1,4 +1,4 @@
-package com.webclient2.model.employee;
+package com.webclient2.request.employee;
 
 import java.util.HashMap;
 import java.util.List;

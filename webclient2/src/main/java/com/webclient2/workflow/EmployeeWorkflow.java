@@ -1,9 +1,9 @@
-package com.webclient2.model.workflow;
+package com.webclient2.workflow;
 
 import org.springframework.context.annotation.Description;
 
 import java.util.List;
-import com.webclient2.model.employee.*;
+import com.webclient2.request.employee.*;
 
 import java.util.stream.Collectors;
 
